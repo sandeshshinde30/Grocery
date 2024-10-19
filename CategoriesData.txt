@@ -1,0 +1,38 @@
+$categories = [
+    [
+        "id" => 1,
+        "name" => "Vegetables",
+        "image" => "image/cat-1.png",
+        "discount" => "upto 45% off"
+    ],
+    [
+        "id" => 2,
+        "name" => "Fresh Fruits",
+        "image" => "image/cat-2.png",
+        "discount" => "upto 45% off"
+    ],
+    [
+        "id" => 3,
+        "name" => "Dairy Products",
+        "image" => "image/cat-3.png",
+        "discount" => "upto 45% off"
+    ],
+    [
+        "id" => 4,
+        "name" => "Fresh Meat",
+        "image" => "image/cat-4.png",
+        "discount" => "upto 45% off"
+    ],
+    [
+        "id" => 5,
+        "name" => "Sea Food",
+        "image" => "image/product-9.png",
+        "discount" => "upto 45% off"
+    ],
+    [
+        "id" => 6,
+        "name" => "Fast Food",
+        "image" => "image/product-10.jpg",
+        "discount" => "upto 45% off"
+    ]
+];

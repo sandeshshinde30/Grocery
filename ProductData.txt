@@ -1,0 +1,32 @@
+$products = [
+    [
+        "name" => "Fresh Orange",
+        "image" => "image/product-1.png",
+        "price" => "$4.99/- - 10.99/-",
+        "rating" => 4.5
+    ],
+    [
+        "name" => "Fresh Onion",
+        "image" => "image/product-2.png",
+        "price" => "$4.99/- - 10.99/-",
+        "rating" => 4.5
+    ],
+    [
+        "name" => "Fresh Meat",
+        "image" => "image/product-3.png",
+        "price" => "$4.99/- - 10.99/-",
+        "rating" => 4.5
+    ],
+    [
+        "name" => "Fresh Cabbage",
+        "image" => "image/product-4.png",
+        "price" => "$4.99/- - 10.99/-",
+        "rating" => 4.5
+    ],
+    [
+        "name" => "Fresh Cabbage",
+        "image" => "image/product-4.png",
+        "price" => "$4.99/- - 10.99/-",
+        "rating" => 4.5
+    ]
+];

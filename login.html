@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Grocery Store - Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #333;
+            --orange: #ff8c00;
+            --light-color: #666;
+            --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+    
+        body {
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+    
+        .header .login-form {
+            width: 35rem;
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            border-radius: .5rem;
+            background: #fff;
+            text-align: center;
+        }
+    
+        .header .login-form h3 {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            color: var(--black);
+            margin-bottom: 1rem;
+        }
+    
+        .header .login-form .box {
+            width: 100%;
+            margin: .7rem 0;
+            background: #eee;
+            border-radius: .5rem;
+            padding: 1rem;
+            font-size: 1.1rem;
+            color: var(--black);
+            border: none;
+        }
+    
+        .header .login-form p {
+            font-size: 1.0rem;
+            padding: .5rem 0;
+            color: var(--light-color);
+        }
+    
+        .header .login-form p a {
+            color: var(--orange);
+            text-decoration: underline;
+        }
+    
+        .header .login-form .btn {
+            background: var(--orange);
+            color: #fff;
+            border: none;
+            border-radius: .5rem;
+            padding: 1rem;
+            font-size: 1.0rem;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    
+        .header .login-form .btn:hover {
+            background-color: #e67e00;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="header">
+        <form id="loginForm" class="login-form" onsubmit="return submitLogin(event);">
+            <h3>Login Now</h3>
+            <input type="email" name="email" placeholder="Your Email" class="box" required>
+            <input type="password" name="password" placeholder="Your Password" class="box" required>
+            <p>Forgot your password? <a href="forgotPass.html">Click here</a></p>
+            <p>Don't have an account? <a href="register.html">Create now</a></p>
+            <input type="submit" value="Login Now" class="btn" onclick=submitLogin()>
+        </form>
+    </div>
+
+    <script src="js/login.js">
+        
+    </script>
+</body>
+</html>
+

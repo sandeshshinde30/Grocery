@@ -1,0 +1,26 @@
+$reviews = [
+    [
+        "name" => "John",
+        "image" => "image/pic-1.png",
+        "text" => "Very good website. All the stuff on this website is absolutely great. You all can buy your stuff from here.",
+        "rating" => 4.5
+    ],
+    [
+        "name" => "Juliyana",
+        "image" => "image/pic-2.png",
+        "text" => "Very good website. All the stuff on this website is absolutely great. You all can buy your stuff from here.",
+        "rating" => 4.5
+    ],
+    [
+        "name" => "Jonathon",
+        "image" => "image/pic-3.png",
+        "text" => "Very good website. All the stuff on this website is absolutely great. You all can buy your stuff from here.",
+        "rating" => 4.5
+    ],
+    // [
+    //     "name" => "Oliveya",
+    //     "image" => "image/pic-4.png",
+    //     "text" => "Very good website. All the stuff on this website is absolutely great. You all can buy your stuff from here.",
+    //     "rating" => 4.5
+    // ],
+];

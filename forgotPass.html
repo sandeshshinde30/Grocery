@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Grocery Store - Forgot Password</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #333;
+            --orange: #ff8c00;
+            --light-color: #666;
+            --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .header .forgot-password-form {
+            width: 35rem;
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            border-radius: .5rem;
+            background: #fff;
+            text-align: center;
+        }
+
+        .header .forgot-password-form h3 {
+            font-size: 25px;
+            text-transform: uppercase;
+            color: var(--black);
+            margin-bottom: 1rem;
+        }
+
+        .header .forgot-password-form .box {
+            width: 100%;
+            margin: .7rem 0;
+            background: #eee;
+            border-radius: .5rem;
+            padding: 1rem;
+            font-size: 1.0rem;
+            color: var(--black);
+            border: none;
+        }
+
+        .header .forgot-password-form p {
+            font-size: 1.1rem;
+            padding: .5rem 0;
+            color: var(--light-color);
+        }
+
+        .header .forgot-password-form p a {
+            color: var(--orange);
+            text-decoration: underline;
+        }
+
+        .header .forgot-password-form .btn {
+            background: var(--orange);
+            color: #fff;
+            border: none;
+            border-radius: .5rem;
+            padding: 1rem;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .header .forgot-password-form .btn:hover {
+            background-color: #e67e00;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <form id="forgotPasswordForm" class="forgot-password-form">
+            <h3>Forgot Password</h3>
+            <input type="email" placeholder="Enter your Email" class="box" required>
+            <p>Remembered your password? <a href="login.html">Login now</a></p>
+            <input type="submit" value="Reset Password" class="btn">
+        </form>
+    </div>
+
+    <script src="js/forgotPassword.js"></script>
+</body>
+</html>

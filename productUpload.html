@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Grocery Store - Product Entry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #333;
+            --orange: #ff8c00;
+            --light-color: #666;
+            --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            --bg-color: #f3f3f3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .productform {
+            width: 35rem;
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            border-radius: .5rem;
+            background: #fff;
+            text-align: center;
+            border: 1px solid #ddd;
+            transition: box-shadow 0.3s;
+        }
+
+        .productform:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .productform h3 {
+            font-size: 25px;
+            text-transform: uppercase;
+            color: var(--black);
+            margin-bottom: 1.5rem;
+        }
+
+        .productform input[type="text"],
+        .productform input[type="number"],
+        .productform input[type="file"] {
+            width: 100%;
+            margin: .7rem 0;
+            padding: 1rem;
+            border-radius: .5rem;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            color: var(--black);
+            transition: border-color 0.3s;
+        }
+
+        .productform input[type="text"]:focus,
+        .productform input[type="number"]:focus {
+            border-color: var(--orange);
+            outline: none;
+        }
+
+        .productform .btn {
+            background: var(--orange);
+            color: #fff;
+            border: none;
+            border-radius: .5rem;
+            padding: 1rem;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .productform .btn:hover {
+            background-color: #e67e00;
+            transform: translateY(-2px);
+        }
+
+        .productform p {
+            font-size: 14px;
+            padding: .5rem 0;
+            color: var(--light-color);
+        }
+
+        .productform p a {
+            color: var(--orange);
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form id="productForm" onsubmit="submitProductForm(event)" class="productform">
+        <h2>Upload Product</h2>
+        <input type="text" name="product_name" placeholder="Product Name" required><br>
+        <input type="number" step="0.01" name="product_price" placeholder="Price" required><br>
+        <input type="number" step="0.1" min="0" max="5" name="product_rating" placeholder="Rating (0-5)" required><br>
+        <input type="file" name="product_image" required><br>
+        <button type="submit" class="btn">Upload Product</button>
+    </form>
+
+    <script src="js/productUpload.js"></script>
+</body>
+</html>

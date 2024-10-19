@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Grocery Store - Review Entry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #333;
+            --orange: #ff8c00;
+            --light-color: #666;
+            --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .reviewform {
+            width: 35rem;
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            border-radius: .5rem;
+            background: #fff;
+            text-align: center;
+        }
+
+        .reviewform h2 {
+            font-size: 25px;
+            text-transform: uppercase;
+            color: var(--black);
+            margin-bottom: 1rem;
+        }
+
+        .reviewform input[type="text"],
+        .reviewform input[type="number"],
+        .reviewform input[type="file"],
+        .reviewform textarea {
+            width: 100%;  /* Make the input fields take full width */
+            margin: 0.5rem 0;  /* Add vertical spacing */
+            padding: 0.8rem;  /* Add padding for better click area */
+            border: 1px solid var(--light-color);  /* Border color */
+            border-radius: 0.5rem;  /* Rounded corners */
+            font-size: 16px;  /* Font size */
+            color: var(--black);  /* Text color */
+            background: #f8f8f8;  /* Background color */
+            transition: border-color 0.3s;  /* Smooth transition for border color */
+        }
+
+        /* Change border color on focus */
+        .reviewform input[type="text"]:focus,
+        .reviewform input[type="number"]:focus,
+        .reviewform input[type="file"]:focus,
+        .reviewform textarea:focus {
+            border-color: var(--orange);  /* Change border color when focused */
+            outline: none;  /* Remove default outline */
+        }
+
+        /* Style for textarea specifically */
+        .reviewform textarea {
+            height: 100px;  /* Set a height for the textarea */
+            resize: vertical;  /* Allow vertical resizing */
+        }
+
+        .reviewform .btn {
+            background: var(--orange);
+            color: #fff;
+            border: none;
+            border-radius: .5rem;
+            padding: 1rem;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .reviewform .btn:hover {
+            background-color: #e67e00;
+        }
+    </style>
+</head>
+<body>
+    <div class="reviewform">
+        <h2>Upload Review</h2>
+        <form id="reviewForm" onsubmit="submitReviewForm(event)">
+            <input type="text" name="review_name" placeholder="Your Name" required><br>
+            <input type="file" name="review_image" placeholder="Upload your image" required><br>
+            <textarea name="review_text" placeholder="Write your review..." required></textarea><br>
+            <input type="number" step="0.1" min="0" max="5" name="review_rating" placeholder="Rating (0-5)" required><br>
+            <button type="submit" class="btn">Upload Review</button>
+        </form>
+    </div>
+
+    <script src="js/reviewUpload.js"></script>
+</body>
+</html>

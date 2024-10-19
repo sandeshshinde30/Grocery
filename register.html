@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Grocery Store - Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #333;
+            --orange: #ff8c00;
+            --light-color: #666;
+            --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .header .register-form {
+            width: 35rem;
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            border-radius: .5rem;
+            background: #fff;
+            text-align: center;
+        }
+
+        .header .register-form h3 {
+            font-size: 25px;
+            text-transform: uppercase;
+            color: var(--black);
+            margin-bottom: 1rem;
+        }
+
+        .header .register-form .box {
+            width: 100%;
+            margin: .7rem 0;
+            background: #eee;
+            border-radius: .5rem;
+            padding: 1rem;
+            font-size: 16px;
+            color: var(--black);
+            text-transform: none;
+            border: none;
+        }
+
+        .header .register-form p {
+            font-size: 16px;
+            padding: .5rem 0;
+            color: var(--light-color);
+        }
+
+        .header .register-form p a {
+            color: var(--orange);
+            text-decoration: underline;
+        }
+
+        .header .register-form .btn {
+            background: var(--orange);
+            color: #fff;
+            border: none;
+            border-radius: .5rem;
+            padding: 1rem;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .header .register-form .btn:hover {
+            background-color: #e67e00;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <form id="registerForm" class="register-form">
+            <h3>Create an Account</h3>
+            <input type="text" name="name" placeholder="Your Name" class="box" required>
+            <input type="email" name="email" placeholder="Your Email" class="box" required>
+            <input type="password" name="password" placeholder="Create Password" class="box" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" class="box" required>
+            <p>Already have an account? <a href="login.html">Login now</a></p>
+            <input type="button" value="Register Now" class="btn" onclick="validateForm()">
+        </form>
+    </div>
+
+    <script src="js/register.js">
+       
+    </script>
+</body>
+</html>
