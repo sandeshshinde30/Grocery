@@ -198,6 +198,8 @@ async function addToCart(name, image, price) {
         quantity: 1 // Assuming a quantity of 1 for simplicity
     };
 
+    console.log(requestData);
+
     try {
         const response = await fetch('addCart.php', {
             method: 'POST',
@@ -221,6 +223,11 @@ async function addToCart(name, image, price) {
         console.error('Error adding item to cart:', error);
     }
 }
+
+
+
+
+
 
 // Function to get cookie value by name
 function getCookie(name) {

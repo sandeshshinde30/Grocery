@@ -27,12 +27,16 @@ if (empty($email)) {
     exit;
 }
 
+$name = $data['name'];
+$image = $data['image'];
+$price = $data['price'];
+$quantity = $data['quantity'];
 // Prepare the SQL statement
-$stmt = $conn->prepare("INSERT INTO cart (Email, Name, Image, Price, Quantity) VALUES (?, ?, ?, ?, ?)");
-$stmt->bind_param("ssssi", $email, $data['name'], $data['image'], $data['price'], $data['quantity']);
+$query = "INSERT INTO `cart` (`ID`, `Email`, `Name`, `Image`, `Price`, `Quantity`) VALUES (NULL, '$email', '$name', '$image', '$price', '$quantity')";
+
 
 // Execute the statement
-if ($stmt->execute()) {
+if (mysqli_query($conn,$query)) {
     echo json_encode(["success" => "Item added to cart."]);
 } else {
     echo json_encode(["error" => "Error adding item to cart: " . $stmt->error]);
